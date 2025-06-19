@@ -1,0 +1,330 @@
+QMainWindow {
+    background-color: #2B2B2B;
+    color: #F0F0F0;
+}
+
+QWidget { /* 可以作为其他控件的默认颜色继承 */
+    color: #D3D3D3; /* 默认浅灰色文字 */
+    background-color: #3C3F41; /* 稍浅的背景，用于面板等 */
+}
+
+QMenuBar {
+    background-color: #3C3F41;
+    color: #D3D3D3;
+    border-bottom: 1px solid #555555;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 4px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #555555;
+}
+
+QMenuBar::item:pressed {
+    background-color: #6A6A6A;
+}
+
+QMenu {
+    background-color: #3C3F41;
+    color: #D3D3D3;
+    border: 1px solid #555555;
+    padding: 2px;
+}
+
+QMenu::item {
+    padding: 4px 20px 4px 20px;
+}
+
+QMenu::item:selected {
+    background-color: #555555;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #555555;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+QToolBar {
+    background-color: #3C3F41;
+    border-bottom: 1px solid #555555;
+    padding: 2px;
+    spacing: 3px; /* 图标之间的间距 */
+}
+
+QToolButton { /* 工具栏按钮 */
+    background-color: transparent;
+    color: #D3D3D3;
+    border: none;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+QToolButton:hover {
+    background-color: #555555;
+}
+
+QToolButton:pressed {
+    background-color: #6A6A6A;
+}
+
+QToolButton:checked { /* 如果有可检查的工具按钮 */
+    background-color: #4A4A4A;
+}
+
+
+QStatusBar {
+    background-color: #3C3F41;
+    color: #D3D3D3;
+    border-top: 1px solid #555555;
+}
+
+QStatusBar::item {
+    border: none; /* 移除状态栏项目之间的边框 */
+}
+
+QLabel {
+    background-color: transparent; /* 使标签背景透明，继承父控件背景 */
+    color: #D3D3D3;
+    font-size: 9pt; /* 普通标签字号 */
+}
+
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #2B2B2B;
+    color: #D3D3D3;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+QSpinBox, QDoubleSpinBox {
+    background-color: #2B2B2B;
+    color: #D3D3D3;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 2px;
+}
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 16px;
+    border-image: url(:/qt-project.org/styles/commonstyle/images/up-arrow-light.png); /* 可能需要替换为自己的图标或颜色 */
+    background-color: #4A4A4A;
+    border-left: 1px solid #555555;
+}
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 16px;
+    border-image: url(:/qt-project.org/styles/commonstyle/images/down-arrow-light.png); /* 可能需要替换为自己的图标或颜色 */
+    background-color: #4A4A4A;
+    border-left: 1px solid #555555;
+    border-top: 1px solid #555555;
+}
+/* 如果没有图标，可以简单设置背景色 */
+QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {
+     /* color: white; */ /* 或者使用字体图标 */
+}
+QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {
+     /* color: white; */
+}
+
+
+QSlider::groove:horizontal {
+    border: 1px solid #555555;
+    height: 8px;
+    background: #2B2B2B;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: #777777; /* 滑块颜色 */
+    border: 1px solid #999999;
+    width: 16px;
+    margin: -4px 0; /* 使滑块看起来在凹槽中间 */
+    border-radius: 8px;
+}
+QSlider::handle:horizontal:hover {
+    background: #888888;
+}
+
+
+QComboBox {
+    background-color: #2B2B2B;
+    color: #D3D3D3;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px; /* 给箭头留空间 */
+}
+QComboBox:editable { /* 如果可编辑 */
+    background: #2B2B2B;
+}
+QComboBox::drop-down { /* 下拉箭头样式 */
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #555555;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #4A4A4A;
+}
+QComboBox::down-arrow {
+    /* image: url(path/to/your/down_arrow_icon_dark.png); */
+    /* 如果没有图标，Qt通常会画一个默认的 */
+}
+QComboBox QAbstractItemView { /* 下拉列表的视图 */
+    border: 1px solid #555555;
+    background-color: #2B2B2B;
+    color: #D3D3D3;
+    selection-background-color: #555555; /* 选中项背景色 */
+}
+
+
+QGroupBox {
+    background-color: #3C3F41; /* 组框背景 */
+    border: 1px solid #555555;
+    border-radius: 4px;
+    margin-top: 10px; /* 为标题留出空间 */
+    padding-top:10px; /* 为标题内容留空间 */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 标题位置 */
+    padding: 0 5px;
+    color: #D3D3D3;
+    left: 10px; /* 标题左边距 */
+    font-size: 10pt; /* 比普通文本稍大 */
+    font-weight: bold; /* 加粗 */
+}
+
+
+QScrollArea {
+    border: none; /* 通常滚动区域本身不需要边框 */
+    background-color: #3C3F41; /* 滚动区域背景，匹配面板 */
+}
+
+QScrollBar:vertical {
+    border: 1px solid #555555;
+    background: #2B2B2B;
+    width: 12px; /* 滚动条宽度 */
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #6A6A6A; /* 滑块颜色 */
+    min-height: 20px; /* 滑块最小高度 */
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #777777;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { /* 上下箭头 */
+    border: none;
+    background: none;
+    height: 0px; /* 如果不需要箭头，可以隐藏 */
+}
+
+QScrollBar:horizontal {
+    border: 1px solid #555555;
+    background: #2B2B2B;
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:horizontal {
+    background: #6A6A6A;
+    min-width: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #777777;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+    width: 0px;
+}
+
+
+QPushButton { /* 已有，但可以微调或确保它覆盖了所有按钮 */
+    background-color: #555555;
+    color: #F0F0F0;
+    border: 1px solid #777777;
+    padding: 5px 10px; /* 增加左右padding */
+    border-radius: 3px;
+    min-height: 20px; /* 确保按钮有一定高度 */
+    font-size: 9pt;
+    /* font-weight: 500; */ /* 也可以考虑 medium weight */
+}
+
+QPushButton:hover {
+    background-color: #6A6A6A;
+}
+
+QPushButton:pressed {
+    background-color: #4A4A4A;
+}
+
+QPushButton:disabled { /* 禁用状态的按钮 */
+    background-color: #404040;
+    color: #888888;
+    border-color: #555555;
+}
+
+/* 特别针对SidePanel中的按钮，如果它们有特定对象名或父类 */
+SidePanel QGroupBox QPushButton { /* 假设SidePanel是父类，或者其QGroupBox有特定名称 */
+    text-align: left;
+    padding: 6px; /* 增加padding使点击区域更大 */
+    /* 可以继承全局QPushButton样式，或在此处覆盖 */
+}
+
+/* ProgressBar for memory monitor */
+QProgressBar {
+    border: 1px solid #555555;
+    border-radius: 3px;
+    text-align: center; /* 如果显示百分比文本 */
+    color: #D3D3D3; /* 文本颜色 */
+    background-color: #2B2B2B; /* 进度条背景 */
+}
+
+QProgressBar::chunk {
+    background-color: #007ACC; /* 进度条填充颜色，例如蓝色 */
+    /* width: 10px; */ /* 如果想要分段效果 */
+    margin: 0.5px;
+    border-radius: 2px;
+}
+
+
+/* 如果您打算使用QTabWidget作为InspectorPanel的基础 */
+QTabWidget::pane { /* 选项卡页面的容器 */
+    border: 1px solid #555555;
+    border-top: none; /* 通常顶部边框由TabBar处理 */
+    background-color: #3C3F41;
+}
+
+QTabBar::tab {
+    background: #4A4A4A;
+    color: #D3D3D3;
+    border: 1px solid #555555;
+    border-bottom: none; /* 未选中时，底部边框由pane提供 */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 2px; /* 选项卡之间的间距 */
+}
+
+QTabBar::tab:selected {
+    background: #3C3F41; /* 选中时与pane背景色一致 */
+    color: #FFFFFF; /* 选中时文字高亮 */
+    border-bottom: 1px solid #3C3F41; /* 关键：选中时"隐藏"底部边框，与pane融合 */
+}
+
+QTabBar::tab:hover {
+    background: #5E5E5E;
+}
